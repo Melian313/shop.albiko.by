@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=<?php echo SITE_CODING?>">
+	<meta charset="<?php echo SITE_CODING?>">
+	<title><?php Core_Page::instance()->showTitle()?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="description" content="<?php Core_Page::instance()->showDescription()?>">
+	<meta name="keywords" content="<?php Core_Page::instance()->showKeywords()?>">
+	<meta name="author" content="HostCMS">
+
+	<link type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic-ext" rel="stylesheet">
+	<link type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic,700italic&subset=latin,cyrillic-ext" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<?php
+	Core_Page::instance()
+		->prependCss('/bootstrap/css/bootstrap.min.css')
+		->css('/bootstrap/css/font-awesome.min.css')
+		->css('/hostcmsfiles/jquery/photobox/photobox.css')
+		->css('/hostcmsfiles/jquery/slider/jquery-ui.css')
+		->css('/hostcmsfiles/slippry/dist/slippry.css')
+		->showCss();
+	?>
+
+	<?php Core_Browser::check()?>
+
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/news/rss/">
+
+	<?php
+	Core_Page::instance()
+		// jQuery
+		->js('/hostcmsfiles/jquery/jquery.min.js')
+		->js('/hostcmsfiles/jquery/slider/jquery-ui.js')
+		// Validate
+		->js('/hostcmsfiles/jquery/jquery.validate.min.js')
+		// LightBox
+		->js('/hostcmsfiles/jquery/lightbox/js/jquery.lightbox.js')
+		//ElevateZoom
+		->js('/hostcmsfiles/jquery/jquery.elevatezoom-3.0.8.min.js')
+		// HostCMS
+		->js('/templates/template1/hostcms.js')
+		->js('/templates/template1/hostcms_adaptive.js')
+		->js('/hostcmsfiles/main.js')
+		// BBcode
+		->js('/hostcmsfiles/jquery/bbedit/jquery.bbedit.js')
+		// Stars
+		->js('/hostcmsfiles/jquery/stars/jquery.ui.core.min.js')
+		->js('/hostcmsfiles/jquery/stars/jquery.ui.stars.js')
+
+		// jQuery.Autocomplete
+		->js('/hostcmsfiles/jquery/jquery.autocomplete.min.js')
+		//photobox
+		->js('/hostcmsfiles/jquery/photobox/jquery.photobox.js')
+		->js('/bootstrap/js/bootstrap.min.js')
+		->js('/hostcmsfiles/slippry/dist/slippry.min.js')
+		->showJs();
+	?>
+
+	<script>
+		$(function() {
+			var demo1 = $("#main_slider").slippry({
+				// transition: 'fade',
+				useCSS: true,
+				// speed: 1000,
+				// pause: 3000,
+				// auto: true,
+				// preload: 'visible',
+				// autoHover: false
+			});
+
+			$('.stop').click(function () {
+				demo1.stopAuto();
+			});
+
+			$('.start').click(function () {
+				demo1.startAuto();
+			});
+
+			$('.prev').click(function () {
+				demo1.goToPrevSlide();
+				return false;
+			});
+			$('.next').click(function () {
+				demo1.goToNextSlide();
+				return false;
+			});
+			$('.reset').click(function () {
+				demo1.destroySlider();
+				return false;
+			});
+			$('.reload').click(function () {
+				demo1.reloadSlider();
+				return false;
+			});
+			$('.init').click(function () {
+				demo1 = $("#main_slider").slippry();
+				return false;
+			});
+
+			$("#zoom").elevateZoom({
+				gallery:'gallery',
+				cursor: 'pointer',
+				galleryActiveClass: 'active',
+				imageCrossfade: true,
+				loadingIcon: '/hostcmsfiles/images/spinner.gif',
+				responsive: true
+			});
+
+			$('.stars').stars({
+				inputType: "select", disableValue: false
+			});
+
+			$(".slider").slider({
+				range: true,
+				//step: 1000,
+				slide: function( event, ui ) {
+					$(this).prev().find("input[name$='_from']").val(ui.values[0]);
+					$(this).prev().find("input[name$='_to']").val(ui.values[1]);
+				},
+				create: function(event, ui) {
+					var min_value_original = parseInt($(this).prev().find("input[name$='_from_original']").val()),
+					max_value_original = parseInt($(this).prev().find("input[name$='_to_original']").val()),
+					min_value = parseInt($(this).prev().find("input[name$='_from']").val()),
+					max_value = parseInt($(this).prev().find("input[name$='_to']").val());
+
+					$(this).slider({
+						min: min_value_original,
+						max: max_value_original,
+						values: [min_value, max_value]
+					});
+				 }
+			});
+
+			//jQuery.Autocomplete selectors
+			$('#search').autocomplete({
+				serviceUrl: '/search/?autocomplete=1',
+				delimiter: ',',
+				maxHeight: 200,
+				width: 300,
+				deferRequestBy: 300,
+				appendTo: '#search_mini_form',
+				onSelect: function (suggestion) {
+					$(this).closest("form").submit();
+				}
+			});
+
+			// Little cart
+			var delay=500, setTimeoutConst;
+			$('.little-cart').hover(function() {
+				 clearTimeout(setTimeoutConst );
+				 $(this).addClass('cart-active').find('.more-cart-info').stop().slideDown();
+			}, function(){
+				var littleCart = $(this);
+				 setTimeoutConst = setTimeout(function(){
+					littleCart.removeClass('cart-active').find('.more-cart-info').stop().slideUp();
+				 }, delay);
+			  });
+
+			$('#gallery').photobox('a',{ time:0 });
+		});
+	</script>
+</head>
+<body class="pageBody">
+<!-- Header starts -->
+	<header>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="quick-access">
+					<ul class="links">
+						<li class="first">
+							<?php
+								if (Core::moduleIsActive('siteuser'))
+								{
+									$oSiteuser = Core_Entity::factory('Siteuser')->getCurrent();
+
+									?><a title="Войти" href="/users/"><?php
+									if (is_null($oSiteuser))
+									{
+										?>Войти<?php
+									}
+									else
+									{
+										?>Здравствуйте, <?php echo htmlspecialchars($oSiteuser->login);
+									}
+									?></a><?php
+								}
+							?>
+						</li>
+						<li>
+							<a title="Карта сайта" href="/map/">Карта сайта</a>
+						</li>
+						<li class="last">
+							<a title="Контакты" href="/contacts/">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+				<!-- Logo -->
+				<div class="logo">
+					<a href="/" title="HostCMS"><img src="/images/logo.png"></a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+			
+					<form id="search_mini_form" method="get" action="/search/">
+						<div class="form-search">
+							<input id="search" type="text" name="text" placeholder="Поиск">
+							<i class="fa fa-search" onclick="$(this).closest('form').submit();"></i>
+						</div>
+					</form>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="little-cart">
+				<?php
+				if (Core::moduleIsActive('shop'))
+				{
+					// Краткая корзина
+					$Shop_Cart_Controller_Show = new Shop_Cart_Controller_Show(
+						Core_Entity::factory('Shop', 4)
+					);
+					$Shop_Cart_Controller_Show
+						->xsl(
+							Core_Entity::factory('Xsl')->getByName('МагазинКорзинаКраткаяСайт3')
+						)
+						->couponText(isset($_SESSION) ? Core_Array::get($_SESSION, 'coupon_text') : '')
+						->show();
+				}
+				?>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="top-container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<?php
+				// Menu
+				$Structure_Controller_Show = new Structure_Controller_Show(
+					Core_Entity::factory('Site', CURRENT_SITE));
+
+				$Structure_Controller_Show->xsl(
+						Core_Entity::factory('Xsl')->getByName('ВерхнееМенюСайт3')
+					)
+					->menu(5)
+					->show();
+				?>
+			</div>
+		</div>
+	</div>
+
+	<?php
+		Core_Page::instance()->execute();
+	?>
+
+	<div class="footer-container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<section id="social_block">
+					<h4>Подписаться</h4>
+					<ul>
+						<li class="twitter">
+							<a title="Twitter" href="http://www.twitter.com/hostcms" target="_blank">
+								<span>Twitter</span>
+							</a>
+						</li>
+						<li class="vk">
+							<a title="VKontakte" href="http://www.vk.com/hostcms" target="_blank">
+								<span>VKontakte</span>
+							</a>
+						</li>
+						<li class="rss">
+							<a title="RSS" href="/news/rss/" target="_blank">
+								<span>RSS</span>
+							</a>
+						</li>
+					</ul>
+
+					<?php
+					// Если модуль рекламы доступен
+					if (Core::moduleIsActive('counter'))
+					{
+					?>
+					<!-- HostCMS Counter -->
+					<script type="text/javascript">document.cookie="hostmake=1; path=/";document.write("<a href=\"http://www.hostcms.ru/\"><img src=\"/counter/counter.php?rand="+Math.random()+"&id=1&refer="+escape(document.referrer)+"&amp;current_page="+escape(window.location.href)+"&cookie="+(document.cookie?"Y":"N")+"&java="+(navigator.javaEnabled()?"Y":"N")+"&screen="+screen.width+'x'+screen.height+"&px="+(((navigator.appName.substring(0,9)=="Microsoft"))?screen.colorDepth:screen.pixelDepth)+"&js_version=1.6&counter=1\" alt=\"HostCMS Counter\" width=\"88\" height=\"31\" /></a>")</script>
+					<noscript>
+					<a href="http://www.hostcms.ru/">
+					<img alt="HostCMS Counter" height="31" src="/counter/counter.php?id=1&amp;counter=1" width="88" /></a></noscript><!-- HostCMS Counter -->
+					<?php
+					}
+					?>
+
+					<div class="hostcms_link">
+						Copyright &copy; Корпорация. Работает на <a href="http://www.hostcms.ru" title="Система управления сайтом HostCMS">HostCMS</a>
+					</div>
+				</section>
+			</div>
+			<div class="hidden-xs hidden-sm col-md-4 col-lg-6">
+				<section>
+					<?php
+					// Нижнее меню
+					$Structure_Controller_Show = new Structure_Controller_Show(
+						Core_Entity::factory('Site', CURRENT_SITE));
+
+						$Structure_Controller_Show
+							->xsl(Core_Entity::factory('Xsl')
+							->getByName('НижнееМенюСайт3'))
+							->show();
+					?>
+				</section>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+				<section id="block_contact_infos">
+					<div>
+						<h4 class="contacts">Контактная информация</h4>
+						<ul class="toggle-footer" style="">
+							<li class="address-info"> ул. Пушкина, д. 123, оф. 456 г. Москва, 101000 </li>
+							<li class="phone-info"><i class="fa fa-phone"></i>+7 (495) 321-456-7 </li>
+							<li class="email-info">
+								<i class="fa fa-envelope"></i><a href="mailto:admin@localhost.ru">admin@localhost.ru</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

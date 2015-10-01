@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><?php Core_Page::instance()->showTitle()?></title>
+	<meta name="description" content="<?php Core_Page::instance()->showDescription()?>" />
+	<meta name="keywords" content="<?php Core_Page::instance()->showKeywords()?>" />
+	<meta content="text/html; charset=<?php echo SITE_CODING?>" http-equiv="Content-Type" />
+         <meta name="mailru-domain" content="IhqUOFjdk9C4qx99" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<?php Core_Page::instance()->showCss()?>
+	<!--[if IE]>
+	<style>.header input[type=text],.header input[type=password]{border:1px solid #eee;height:20px}</style>
+	<![endif]-->
+	<?php Core_Browser::check()?>
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/news/rss/" />
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.js"></script>
+	<!-- validate -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.validate.js"></script>
+	<!-- LightBox -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/lightbox/js/jquery.lightbox.js"></script>
+	<link rel="stylesheet" type="text/css" href="/hostcmsfiles/jquery/lightbox/css/jquery.lightbox.css" media="screen" />
+
+	<script type="text/javascript" src="/templates/template1/hostcms.js"></script>
+	<script type="text/javascript" src="/hostcmsfiles/main.js"></script>
+
+	<!-- BBcode -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/bbedit/jquery.bbedit.js"></script>
+
+	<!-- Stars -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/stars/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="/hostcmsfiles/jquery/stars/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="/hostcmsfiles/jquery/stars/jquery.ui.stars.js"></script>
+
+	<link rel="stylesheet" href="/hostcmsfiles/jquery/slider/jquery-ui.css">
+	<script src="/hostcmsfiles/jquery/slider/jquery-ui.min.js"></script>
+
+	<!-- jQuery.Autocomplete -->
+	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.autocomplete.min.js"></script>
+
+	<script type="text/javascript">
+		// <![CDATA[
+		$(function() {
+			$('#gallery a[target="_blank"]:has(img)').lightBox();
+
+			$('.stars').stars({
+				inputType: "select", disableValue: false
+			});
+
+			// переход по ссылке(class="button")
+			$('.button:has(a[href])').click(function(){window.location.href = $(this).find('a').attr('href')});
+
+			// Очистка полей авторизации
+			$.fn.clearAuthFields = function(){
+				oV={l:this.find('[name="login"]').val(),p:this.find('[name="password"]').val()};
+				this.find(':text,:password').focus(function(){
+					o=$(this); n=o.attr('name');
+					if (n=='login' && o.val()==oV.l || n=='password' && o.val()==oV.p){
+						v=o.val(); o.val('');
+						o.focusout(v, function(){if ($(this).val() == '') $(this).val(v)})}
+				})};
+			$('#authorization').clearAuthFields();
+
+			$('div.filter legend').click(function(){
+				$(this).toggleClass("right");
+				$(this).next('div').toggle('fast', function(){ $(this).parent().toggleClass("toggle") });
+			});
+
+			$(".slider").slider({
+				range: true,
+				//step: 1000,
+				slide: function( event, ui ) {
+					$(this).prev().find("input[name*='_from']").val(ui.values[0]);
+					$(this).prev().find("input[name*='_to']").val(ui.values[1]);
+				},
+				create: function(event, ui) {
+					var min_value = parseInt($(this).prev().find("input[name*='_from']").val());
+					var max_value = parseInt($(this).prev().find("input[name*='_to']").val());
+
+					$(this).slider({
+						min: min_value,
+						max: max_value,
+						values: [min_value, max_value]
+					});
+				 }
+			});
+		});
+		// ]]>
+	</script>
+
+	<script type="text/javascript">
+	$(function() {
+		//jQuery.Autocomplete selectors
+		$('#search').autocomplete({
+			serviceUrl: '/search/?autocomplete=1',
+			delimiter: ',',
+			maxHeight: 200,
+			width: 300,
+			deferRequestBy: 300
+		});
+	});
+	</script>
+
+<script type='text/javascript' src="/images/js/nivo.slider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+          $('#barousel_prevnextnav').barousel({                
+                navType: 2
+            });
+    $(".barousel_image div:first").addClass("default");
+     var height = $(document).height()-125;
+     $(".fon").css("height",height);
+     $(".fon").css("display", "block");
+
+});
+</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+        var height = $(".left_content").height();
+        $(".right_content").css("height",height+"px");
+        var width = $(document).width()/2; 
+        $(".adres").css("left", width+"px");
+        $(".adres").css("display","block");
+         $('.logo_by-info').hover(function(event){
+    // Hover over code
+    var titleText = $(this).attr('title');
+    $(this)
+      .data('tipText', titleText)
+      .removeAttr('title');
+      
+    $('<p class="tooltip"></p>')
+      .text(titleText)
+      .appendTo('body')
+      .css('top', (event.pageY - 25) + 'px')
+      .css('left', (event.pageX + 20) + 'px')
+      .fadeIn('slow');
+  }, function() {
+    // Hover out code
+    $(this).attr('title', $(this).data('tipText'));
+    $('.tooltip').remove();
+  }).mousemove(function(event){
+    // Mouse move code
+    $('.tooltip')
+      .css('top', (event.pageY - 25) + 'px')
+      .css('left', (event.pageX + 20) + 'px');
+  });
+        });
+</script>
+
+<script type="text/javascript" src="/images/js/jquery.totemticker.js"></script>
+<script type="text/javascript">
+		$(function(){
+			$('#vertical-ticker').totemticker({
+				row_height	:	'220px',
+				next		:	'#ticker-next',
+				previous	:	'#ticker-previous',
+				stop		:	'#stop',
+				start		:	'#start',
+				mousestop	:	true,
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="wrapper">
+
+<header>
+<div class="top_menu">
+<a href="/" class="logo"><img src="/images/site/logo.png" /></a>
+	<?php
+	// Верхнее меню
+	$Structure_Controller_Show = new Structure_Controller_Show(
+		Core_Entity::factory('Site', CURRENT_SITE));
+
+	$Structure_Controller_Show->xsl(
+		Core_Entity::factory('Xsl')->getByName('ВерхнееМеню')
+	)
+	->menu(1)
+	->show();
+	?>
+</div><!-- end top_menu -->
+<div style="float: right; padding-right: 13px; position: relative; top: -21px; font-size: 16pt;">Оптовая база завода Айрон в Беларуси</div>
+</header>
+<main>
+<!--
+<div class="adres">
+<?php
+Core_Entity::factory('Document', 7)->Document_Versions->getCurrent()->execute();
+?>
+</div>
+-->
+<div class="slide">
+<?php
+// Новости
+if (Core::moduleIsActive('informationsystem'))
+{
+	$Informationsystem_Controller_Show = new Informationsystem_Controller_Show(
+		Core_Entity::factory('Informationsystem', 15)
+	);
+	$Informationsystem_Controller_Show
+		->xsl(
+			Core_Entity::factory('Xsl')->getByName('СлайдНаГлавной')
+		)
+		->groupsMode('none')
+		->itemsForbiddenTags(array('text'))
+		->group(FALSE)
+		->limit(99)
+		->show();
+}
+?>			
+</div>
+<section>
+
+<?php
+	Core_Page::instance()->execute();
+	?>
+
+</section>
+</main>
+</div><!-- end wrapper-->
+<footer>
+<div class="footer">
+<a href="/" class="logo_footer"><img src="/images/site/logo_footer.png" /></a>
+</div><!-- end footer-->
+<div class="footer_bottom">
+<a href="http://www.by-info.by/" class="logo_by-info" title="Разработка сайтов в гродно">
+<img src="/images/site/logo_by-info.png" />
+</a>
+</div>
+<div style="display:none;">
+			Copyright &copy; Корпорация. Работает на <a href="http://www.hostcms.ru" title="Система управления сайтом HostCMS">HostCMS</a>
+		</div>	
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter28521641 = new Ya.Metrika({id:28521641,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/28521641" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<fields>
+		<field type="0">
+			<name>Название организации</name>
+			<value>Моя компания</value>
+			<macros>company_name</macros>
+		</field>
+		<field type="2">
+			<name>Логотип</name>
+			<value></value>
+			<macros>logo</macros>
+			<path>/images/site50/logo.jpg</path>
+			<extension>jpg</extension>
+			<max_width>369</max_width>
+			<max_height>181</max_height>
+		</field>
+		<field type="0">
+			<name>Электронная почта</name>
+			<value>admin@localhost.ru</value>
+			<macros>company_email</macros>
+		</field>
+		<field type="0">
+			<name>Адрес</name>
+			<value>ул. Пушкина, д. 123, оф. 456 г. Москва, 101000</value>
+			<macros>company_address</macros>
+		</field>
+		<field type="0">
+			<name>Телефон</name>
+			<value>+7 (495) 321-456-7</value>
+			<macros>company_phone</macros>
+		</field>
+	</fields>
+</template>

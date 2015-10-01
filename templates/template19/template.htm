@@ -1,0 +1,90 @@
+<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+
+	<ul id="main_slider">
+		<li><a href="#slide1"><img src="/images/bootstrap-demo/musician-349790_1280.jpg"></a></li>
+		<li><a href="#slide2"><img src="/images/bootstrap-demo/home-office-336373_1280.jpg"></a></li>
+		<li><a href="#slide3"><img src="/images/bootstrap-demo/tuscany-428041_1280.jpg"></a></li>
+		<li><a href="#slide4"><img src="/images/bootstrap-demo/iphone-6-458159_1280.jpg"></a></li>
+		<li><a href="#slide5"><img src="/images/bootstrap-demo/aoraki-90388_1280.jpg"></a></li>
+	</ul>
+
+	<div class="content-block">
+		<?php
+			Core_Page::instance()->execute();
+		?>
+	</div>
+
+	<?php
+	if (Core::moduleIsActive('shop'))
+	{
+		$Shop_Controller_Show = new Shop_Controller_Show(
+			Core_Entity::factory('Shop', 4)
+		);
+		$Shop_Controller_Show
+			->xsl(
+				Core_Entity::factory('Xsl')->getByName('МагазинКаталогТоваровНаГлавнойСпецПредСайт3')
+			)
+			->groupsMode('none')
+			->group(FALSE)
+			->cache(FALSE)
+			->limit(3);
+
+		$Shop_Controller_Show
+			->shopItems()
+			->queryBuilder()
+			->join('shop_item_discounts', 'shop_item_discounts.shop_item_id', '=', 'shop_items.id')
+			->join('shop_discounts', 'shop_discounts.id', '=', 'shop_item_discounts.shop_discount_id')
+			->where('shop_discounts.active', '=', 1)
+			->where('shop_discounts.start_datetime', '<', Core_Date::timestamp2sql(time()))
+			->where('shop_discounts.end_datetime', '>', Core_Date::timestamp2sql(time()))
+			->where('shop_discounts.deleted', '=', 0)
+			->where('shop_items.modification_id', '=', 0)
+			->clearOrderBy()
+			->orderBy('RAND()');
+
+		$Shop_Controller_Show->show();
+	}
+
+	if (Core::moduleIsActive('informationsystem'))
+	{
+		// Новости
+		$Informationsystem_Controller_Show = new Informationsystem_Controller_Show(
+			Core_Entity::factory('Informationsystem', 23)
+		);
+		$Informationsystem_Controller_Show
+			->xsl(
+				Core_Entity::factory('Xsl')->getByName('СписокНовостейНаГлавнойСайт3')
+			)
+			->groupsMode('none')
+			->itemsForbiddenTags(array('text'))
+			->group(FALSE)
+			->limit(2)
+			->show();
+	}
+
+	if (Core::moduleIsActive('informationsystem'))
+	{
+		// Услуги
+		$Informationsystem_Controller_Show = new Informationsystem_Controller_Show(
+			Core_Entity::factory('Informationsystem', 27)
+		);
+
+		$Informationsystem_Controller_Show
+			->informationsystemItems()
+			->queryBuilder()
+			->clearOrderBy()
+			->orderBy('RAND()');
+
+		$Informationsystem_Controller_Show
+			->xsl(
+				Core_Entity::factory('Xsl')->getByName('СписокУслугНаГлавнойСайт3')
+			)
+			->groupsMode('none')
+			->itemsForbiddenTags(array('text'))
+			->group(FALSE)
+			->itemsProperties(TRUE)
+			->limit(4)
+			->show();
+	}
+	?>
+</div>

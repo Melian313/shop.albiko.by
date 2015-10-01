@@ -1,0 +1,114 @@
+<div class="breadcrumbs"><?php
+// Вывод строки навигации
+/* $Structure_Controller_Breadcrumbs = new Structure_Controller_Breadcrumbs(
+		Core_Entity::factory('Site', CURRENT_SITE)
+	);
+$Structure_Controller_Breadcrumbs
+	->xsl(
+		Core_Entity::factory('Xsl')->getByName('ХлебныеКрошки')
+	)
+	->show();*/
+?></div>
+
+<div class="left_block content">
+	<div class="data">
+		<?php
+		Core_Page::instance()->execute();
+		?>
+	</div>
+</div>
+
+<div class="right_block">
+	<div class="content">
+		<?php
+		// Разделы магазина
+		if (Core::moduleIsActive('shop'))
+		{
+			$Shop_Controller_Show = new Shop_Controller_Show(
+				Core_Entity::factory('Shop', Core_Page::instance()->libParams['shopId'])
+			);
+			$Shop_Controller_Show
+				->xsl(
+					Core_Entity::factory('Xsl')->getByName('МагазинГруппыТоваровНаГлавной')
+				)
+				->groupsMode('tree')
+				->group(0)
+				->limit(0)
+				->show();
+		}
+
+		// Фильтр справа
+		if (Core::moduleIsActive('shop') && isset(Core_Page::instance()->libParams['shopId']))
+		{
+			$oShop = Core_Entity::factory('Shop', Core_Page::instance()->libParams['shopId']);
+			$Shop_Controller_Show = new Shop_Controller_Show($oShop);
+			$Shop_Controller_Show
+				->xsl(
+					Core_Entity::factory('Xsl')->getByName('МагазинФильтр')
+				)
+				->groupsMode('tree')
+				->limit(0)
+				->itemsProperties(TRUE);
+
+			if (is_object(Core_Page::instance()->object)
+			&& get_class(Core_Page::instance()->object) == 'Shop_Controller_Show')
+			{
+				$Shop_Controller_Show->group(Core_Page::instance()->object->group);
+				$iCurrentShopGroup = Core_Page::instance()->object->group;
+			}
+			else
+			{
+				$iCurrentShopGroup = 0;
+			}
+
+			$price_from = intval(Core_Array::getGet('price_from'));
+			$price_to = intval(Core_Array::getGet('price_to'));
+
+			if ($price_from)
+			{
+				$Shop_Controller_Show->addEntity(
+					Core::factory('Core_Xml_Entity')
+						->name('price_from')->value($price_from)
+				);
+				$Shop_Controller_Show->addCacheSignature('price_from=' . $price_from);
+			}
+
+			if ($price_to)
+			{
+				$Shop_Controller_Show->addEntity(
+					Core::factory('Core_Xml_Entity')
+						->name('price_to')->value($price_to)
+				);
+				$Shop_Controller_Show->addCacheSignature('price_to=' . $price_to);
+			}
+
+			$Shop_Controller_Show
+				->group($iCurrentShopGroup)
+				->addMinMaxPrice()
+				->show();
+		}
+
+		// Метки
+		if (Core::moduleIsActive('shop') && Core::moduleIsActive('tag'))
+		{
+			$Shop_Controller_Tag_Show = new Shop_Controller_Tag_Show(
+				Core_Entity::factory('Shop', Core_Page::instance()->libParams['shopId'])
+			);
+			$Shop_Controller_Tag_Show
+				->xsl(
+					Core_Entity::factory('Xsl')->getByName('ОблакоТэговМагазин')
+				);
+
+			if (is_object(Core_Page::instance()->object)
+			&& get_class(Core_Page::instance()->object) == 'Shop_Controller_Show'
+			&& Core_Page::instance()->object->group)
+			{
+				$Shop_Controller_Tag_Show->group(Core_Page::instance()->object->group);
+			}
+
+			$Shop_Controller_Tag_Show->show();
+		}
+		?>
+	</div>
+</div>
+<div class="clearing"></div>

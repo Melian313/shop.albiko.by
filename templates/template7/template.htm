@@ -1,0 +1,64 @@
+<div class="content1">
+<div id="slider">
+<h3>Сертификаты<h3>
+
+<a href="#" id="ticker-next"><img src="/images/site/prev.png"/></a>
+
+<?php
+// Новости
+if (Core::moduleIsActive('informationsystem'))
+{
+	$Informationsystem_Controller_Show = new Informationsystem_Controller_Show(
+		Core_Entity::factory('Informationsystem', 17)
+	);
+	$Informationsystem_Controller_Show
+		->xsl(
+			Core_Entity::factory('Xsl')->getByName('СписокНовостейНаГлавнойСертификаты')
+		)
+		->groupsMode('none')
+		->itemsForbiddenTags(array('text'))
+		->group(FALSE)
+		->limit(10)
+		->show();
+}
+?>
+
+<a href="#" id="ticker-previous"><img src="/images/site/next.png"/></a>
+ 
+</div>
+</div>
+<div class="content2">
+<h1>Добро пожаловать</h1>
+<table border="0" style="width: 100%;">
+<tbody>
+<tr>
+<td align="center" valign="middle"><a href="http://www.airon16.ru" target="_blank"><img src="/images/logo/airon.png" width="106" height="30" /></a></td>
+<td align="center" valign="middle"><a href="http://www.astrial.ru" target="_blank"><img src="/images/logo/astrial.png" width="128" height="21" /></a></td>
+<td align="center" valign="middle"><a href="http://eleros.ru" target="_blank"><img src="/images/logo/eleros.png" width="105" height="45" /></a></td>
+<td align="center" valign="middle"><a href="http://www.asstudio.by/" target="_blank"><img src="http://www.asstudio.by/images/site/logo.jpg" height="40" /></a></td>
+</tr>
+</tbody>
+</table>
+<?php
+// Каталог
+if (Core::moduleIsActive('informationsystem'))
+{
+	$Informationsystem_Controller_Show = new Informationsystem_Controller_Show(
+		Core_Entity::factory('Informationsystem', 16)
+	);
+	$Informationsystem_Controller_Show
+		->xsl(
+			Core_Entity::factory('Xsl')->getByName('СписокКартинокнаГлавной')
+		)
+		->groupsMode('all')
+            ->itemsForbiddenTags(array('text'))
+            ->group(false)
+            ->limit(8)
+            ->itemsProperties(false)
+            ->show();
+}
+?>
+<?php		
+Core_Page::instance()->execute();
+?>
+</div>
