@@ -1,0 +1,18 @@
+"2015-10-06 00:26:22",undefined,"Попытка доступа к модулю site незарегистрированным пользователем",4,-,http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:26:56",admin,"Вход в систему управления",4,-,http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:26:56",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:27:12",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=1,127.0.0.1
+"2015-10-06 00:27:18",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=1,127.0.0.1
+"2015-10-06 00:27:24",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=1&hostcms[checked][0][1]=1,127.0.0.1
+"2015-10-06 00:27:29",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:27:31",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:27:35",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:27:38",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=3,127.0.0.1
+"2015-10-06 00:27:41",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=3,127.0.0.1
+"2015-10-06 00:27:47",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=3&hostcms[checked][0][2]=1,127.0.0.1
+"2015-10-06 00:27:47",admin,"Выполнено действие ""Редактировать"", формы ""Домены сайта""",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=3&hostcms[checked][0][2]=1,127.0.0.1
+"2015-10-06 00:28:24",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:28:27",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/alias/index.php?site_id=1,127.0.0.1
+"2015-10-06 00:28:31",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:28:34",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1
+"2015-10-06 00:28:37",admin,"Доступ к модулю ""site"" разрешен",1,"Демонстрационный сайт",http://shop.albiko.by2/admin/site/index.php,127.0.0.1

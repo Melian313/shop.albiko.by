@@ -4,8 +4,8 @@ return array (
 	'default' => array (
 		'driver' => 'mysql',
 		'host' => 'localhost',
-		'username' => 'albico-by',
-		'password' => 'kQ1QQNq6',
+		'username' => 'root',
+		'password' => '',
 		'database' => 'site_albico-by'
 	)
 );

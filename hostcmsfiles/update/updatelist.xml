@@ -1,23 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updates>
-<expiration_of_support>2015-09-30</expiration_of_support>
-<update id="142">
-<update_name>6.5.2</update_name>
-<update_description>[+] Реализована система бонусов, позволяющая начислять на лицевой счет пользователя бонусные баллы в виде процента от цены товара или в фиксированном размере. Справочник бонусов доступен в разделе &quot;Скидки&quot;, добавление бонуса для товара осуществляется через столбец &quot;Скидки&quot;.
-[+] Реализована частичная оплата с лицевого счета при оплате любой платежной системой.
-Информация о добавлении работы с бонусами в уже существующие магазины размещена на странице http://www.hostcms.ru/documentation/modules/shop/discounts/bonuses/
-[+] В справочник валют добавлен вывод даты обновления курса.
-[*] Обновлены обработчики oAuth авторизации.
-[*] Исключено двойное подчеркивание акронимов в Firefox 40+</update_description>
-<update_datetime>07.08.2015 16:45:16</update_datetime>
-</update>
-<update id="143">
-<update_name>6.5.3</update_name>
-<update_description>[+] Реализована интернационализация в XSL-шаблонах. При редактировании XSL-шаблона добавлено указание сущностей в DTD для соответствующего языка. Более подробно см. http://www.hostcms.ru/documentation/modules/xsl/i18n/
-[+] Для сайтов добавлено указание языка, на котором он работает.
-[+] Реализован виджет заметок на главной странице центра администрирования.
-[+] Реализован экспорт в VendorYML: https://yandex.ru/support/vendormarket/</update_description>
-<update_datetime>03.09.2015 15:33:57</update_datetime>
-</update>
-<error>0</error>
+<error>4</error>
 </updates>
