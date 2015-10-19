@@ -13,37 +13,7 @@
 	</xsl:template>
 
 	<xsl:template match="/shop">
-		<div class="block block-side-nav first">
-			<div class="block-title">
-				<strong>
-					<i class="fa fa-tags"></i><span>Метки</span>
-				</strong>
-			</div>
-			
-			<xsl:if test="count(tag) != 0">
-				<xsl:variable name="max_tag_count" select="(/shop/tag/count[not(. &lt; /shop/tag/count)])[1] - 1"/>
 
-				<xsl:variable name="max_size" select="13"/>
-				<xsl:variable name="min_size" select="8"/>
-
-				<xsl:variable name="coeff_size">
-					<xsl:choose>
-						<xsl:when test="$max_tag_count &gt; 0">
-							<xsl:value-of select="($max_size - $min_size) div $max_tag_count"/>
-						</xsl:when>
-						<xsl:otherwise>0</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				<div class="block-content">
-					<div class="TagsCloud">
-						<xsl:apply-templates select="tag">
-							<xsl:with-param name="min_size" select="$min_size"/>
-							<xsl:with-param name="coeff_size" select="$coeff_size"/>
-						</xsl:apply-templates>
-					</div>
-				</div>
-			</xsl:if>
-		</div>
 	</xsl:template>
 
 	<!-- Облако из групп -->

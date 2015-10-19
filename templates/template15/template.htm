@@ -198,86 +198,49 @@
 				</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<?php
-				//Производители
-				$oShop_Producer_Controller_Show = new Shop_Producer_Controller_Show(
-					Core_Entity::factory('Shop', 4)
-				);
+					<div class="row products-grid">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-12 hidden-xs hidden-ms item">
+							<div class="grid_wrap">
+								<div class="product-image">
+									<a href="/shop/stoly/279/" title="Стол Eleros на стальных ножках хром (мед)">
+										<img src="/upload/shop_4/2/7/9/item_279/small_shop_items_catalog_image279.jpg" alt="Стол Eleros на стальных ножках хром (мед)">
+									</a>
+								</div>
+								<div class="price-box">
+          <span id="product-price-12-new" class="regular-price">
+            <span class="price">1 710 000 руб. </span>
+          </span>
+								</div>
+								<div class="product-shop">
+									<h3 class="product-name">
+										<a href="/shop/stoly/279/" title="Стол Eleros на стальных ножках хром (мед)">Стол Eleros на стальных ножках хром (мед)</a>
+									</h3>
+									<div class="actions"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-12 hidden-xs hidden-ms item">
+							<div class="grid_wrap">
+								<div class="product-image">
+									<a href="/shop/stoly/278/" title="Стол Eleros на стальных ножках хром (лайм)">
+										<img src="/upload/shop_4/2/7/8/item_278/small_shop_items_catalog_image278.jpg" alt="Стол Eleros на стальных ножках хром (лайм)">
+									</a>
+								</div>
+								<div class="price-box">
+          <span id="product-price-12-new" class="regular-price">
+            <span class="price">1 710 000 руб. </span>
+          </span>
+								</div>
+								<div class="product-shop">
+									<h3 class="product-name">
+										<a href="/shop/stoly/278/" title="Стол Eleros на стальных ножках хром (лайм)">Стол Eleros на стальных ножках хром (лайм)</a>
+									</h3>
+									<div class="actions"></div>
+								</div>
+							</div>
+						</div>
 
-				$oShop_Producer_Controller_Show
-					->xsl(
-						Core_Entity::factory('Xsl')->getByName('МенюПроизводителиСайт3')
-					)
-					->limit(5)
-					->show();
-				?>
-				</div>
-
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<?php
-				// Последний заказ
-				$oShop = Core_Entity::factory('Shop', 4);
-
-				$Shop_Controller_Show = new Shop_Controller_Show(
-					$oShop
-				);
-
-				$Shop_Controller_Show
-					->xsl(
-						Core_Entity::factory('Xsl')->getByName('МагазинПоследнийЗаказСайт3')
-					)
-					->groupsMode('none')
-					->limit(0);
-
-				$oShop_Orders = $oShop->Shop_Orders;
-				$oShop_Orders
-					->queryBuilder()
-					->where('shop_orders.paid', '=', 1)
-					->clearOrderBy()
-					->orderBy('shop_orders.id', 'DESC')
-					->limit(1);
-
-				$aShop_Orders = $oShop_Orders->findAll();
-
-				if (count($aShop_Orders))
-				{
-					foreach ($aShop_Orders as $oShop_Order)
-					{
-						$aShop_Order_Items = $oShop_Order->Shop_Order_Items->findAll();
-
-						foreach ($aShop_Order_Items as $oShop_Order_Item)
-						{
-							if ($oShop_Order_Item->shop_item_id)
-							{
-								$oShop_Item = Core_Entity::factory('Shop_Item')->find($oShop_Order_Item->shop_item_id);
-
-								!is_null($oShop_Item->id) && $Shop_Controller_Show->addEntity(
-									$oShop_Item
-										->addForbiddenTag('text')
-										->addForbiddenTag('description')
-										->addForbiddenTag('shop_producer')
-										->showXmlComments(FALSE)
-										->showXmlAssociatedItems(FALSE)
-										->showXmlModifications(FALSE)
-										->showXmlSpecialprices(FALSE)
-										->showXmlTags(FALSE)
-										->showXmlWarehousesItems(FALSE)
-										->showXmlSiteuser(FALSE)
-										->showXmlProperties(FALSE)
-								);
-							}
-						}
-
-						$Shop_Controller_Show->addEntity(
-							$oShop_Order
-						);
-					}
-
-					$Shop_Controller_Show
-						->itemsForbiddenTags(array('text'))
-						->show();
-				}
-				?>
+					</div>
 				</div>
 				</div><!-- /row -->
 				<?php

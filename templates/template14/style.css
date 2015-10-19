@@ -64,17 +64,17 @@ header .links li.last a {
 }
 
 a {
-    color: #f1393c;
+    color: #40279d;
     transition: all 0.4s ease 0s;
     background: none repeat scroll 0 0 transparent;
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:hover {
 	color: #1997e4;
 }
 
-.logo {margin-top: 30px}
+.logo {/* margin-top: 30px */}
 
 /* Корзина */
 .cart_content {
@@ -276,6 +276,10 @@ header .form-search:after {
 
 header, .content-container, .top-container {
 	margin: 0 32px;
+}
+
+.content-container{
+    min-height: 800px;
 }
 
 /* Группы магазина */
@@ -500,7 +504,7 @@ strong {
 
 .products-grid .product-image{
     /* background: none repeat scroll 0 0 #f2f2f2; */
-    max-height: 275px;
+    max-height: 250px;
 }
 
 .products-grid .product-image a{
@@ -512,6 +516,23 @@ strong {
     padding: 40px;
     text-align: center;
     color: #ccc;
+}
+#social_block,
+.quick-access,
+ul.nav.navbar-nav  li,
+ul.siteMap li:nth-child(2),
+ul.siteMap li:nth-child(3),
+ul.siteMap li:nth-child(4),
+ul.siteMap li:nth-child(5),
+ul.siteMap li:nth-child(6),
+.siteMap > li:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(1),
+.row.footer_menu ,
+nav.navbar.navbar-default,
+div.navbar-header,
+div.top-container,
+.news_title{
+    display: none!important;
+
 }
 
 .products-grid .product-shop {
@@ -1352,7 +1373,7 @@ a.root, .group_list {
 
 /* Элемент */
 h1.item_title {
-    color: #f1393c;
+    color: #40279d;
     font-size: 30pt;
     font-weight: 300;
     margin-top: 9px !important;
@@ -1428,6 +1449,7 @@ h1.item_title {
 
 #gallery img {
 	border:2px solid white;
+	width: 100px;
 }
 .active img {
 	border:2px solid #f1393c !important;
@@ -2287,7 +2309,7 @@ input[type="radio"], input[type="checkbox"] {margin: 0 !important}
 		background: none !important
 	}
 	.navbar-nav li:hover{
-		background-color: #f1393c;
+		background-color: #40279d;
 	}
 	.navbar-nav li:hover > a, .navbar-nav li:hover > i{
 		color: #fff !important;
@@ -2422,7 +2444,7 @@ input[type="radio"], input[type="checkbox"] {margin: 0 !important}
 	text-decoration: none;
 }
 .navbar-nav > li.current {
-	background-color: #f1393c !important;
+	background-color: #40279d !important;
 }
 .navbar-nav > li.current > a, .navbar-nav > li.current > i {
 	color: #fff !important;
@@ -2492,7 +2514,7 @@ ul.sf-menu-phone2.filter {
 /* Bootstrap */
 @media (max-width: 992px) {
   .logo { text-align: center; }
-  .grid_wrap { height: 560px; }
+  .grid_wrap { height: 100%; }
   .width2  { width: 100%;}
 }
 

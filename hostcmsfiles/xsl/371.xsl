@@ -314,16 +314,16 @@
 					</h3>
 					
 					<div class="actions">
-						<button class="button btn-cart" onclick="return $.bootstrapAddIntoCart('{/shop/url}cart/', {@id}, 1)" title="Add to Cart" type="button">
+						<!--	<button class="button btn-cart" onclick="return $.bootstrapAddIntoCart('{/shop/url}cart/', {@id}, 1)" title="Add to Cart" type="button">
 							<i class="fa fa-shopping-cart bg-color5">
 								<b></b>
 							</i>
 							<span class="bg-color3">
 								<span>В корзину</span>
 							</span>
-						</button>
+						</button>-->
 						
-						<xsl:variable name="shop_item_id" select="@id" />
+						<!--<xsl:variable name="shop_item_id" select="@id" />
 						<ul class="add-to-links">
 							<li>
 								<xsl:if test="/shop/favorite/shop_item[@id = $shop_item_id]/node()">
@@ -338,7 +338,7 @@
 								<span class="separator">|</span>
 							<a class="link-compare" onclick="return $.addCompare('{/shop/url}', {@id}, this)"><i class="fa fa-bar-chart"></i>Сравнить</a>
 							</li>
-						</ul>
+						</ul>-->
 					</div>
 				</div>
 			</div>

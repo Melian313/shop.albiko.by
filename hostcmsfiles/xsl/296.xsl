@@ -9,18 +9,7 @@
 	<xsl:decimal-format name="my" decimal-separator="," grouping-separator=" "/>
 
 	<xsl:template match="/">
-		<div class="block block-side-nav first">
-			<div class="block-title">
-				<strong>
-					<i class="fa fa-filter"></i><span>Фильтр</span>
-				</strong>
-			</div>
-			<div class="block-content">
-				<ul class="sf-menu-phone2 filter">
-					<xsl:apply-templates select="/shop"/>
-				</ul>
-			</div>
-		</div>
+
 	</xsl:template>
 
 	<xsl:variable name="n" select="number(3)"/>

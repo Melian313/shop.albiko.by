@@ -1,0 +1,64 @@
+"2015-10-11 20:20:06",admin,"Вход в систему управления",4,-,http://shop.albico.by2/admin/index.php,127.0.0.1
+"2015-10-11 20:20:53",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?hostcms[action]=edit&shop_id=4&shop_group_id=609&hostcms[checked][0][609]=1&hostcmsMode=blank,127.0.0.1
+"2015-10-11 20:20:59",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/,127.0.0.1
+"2015-10-11 20:21:15",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?shop_id=4&shop_group_id=609&hostcmsMode=blank&hostcms[checked][0][609]=1,127.0.0.1
+"2015-10-11 20:22:15",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php,127.0.0.1
+"2015-10-11 20:22:36",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php,127.0.0.1
+"2015-10-11 20:22:48",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php?parent_id=99,127.0.0.1
+"2015-10-11 20:23:01",admin,"Доступ к модулю ""tag"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/tag/index.php,127.0.0.1
+"2015-10-11 20:23:18",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php,127.0.0.1
+"2015-10-11 20:23:31",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php,127.0.0.1
+"2015-10-11 20:23:39",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php,127.0.0.1
+"2015-10-11 20:23:42",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php?hostcms[checked][0][78]=1,127.0.0.1
+"2015-10-11 20:23:46",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php,127.0.0.1
+"2015-10-11 20:24:25",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?hostcms[action]=edit&shop_id=4&shop_group_id=612&hostcms[checked][1][0]=1&hostcmsMode=blank,127.0.0.1
+"2015-10-11 20:24:29",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/,127.0.0.1
+"2015-10-11 20:25:19",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php,127.0.0.1
+"2015-10-11 20:25:29",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php?hostcms[checked][0][70]=1,127.0.0.1
+"2015-10-11 20:25:32",admin,"Model 'Shop_Model' does not exist
+35 modules\core\exception.php
+375 modules\core\orm.php
+245 modules\core\entity.php
+3 hostcmsfiles\lib\lib_113\lib_config_113.php
+405 modules\core\command\controller\default.php
+190 modules\core\router\route.php
+245 index.php",0,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/shop/612/,127.0.0.1
+"2015-10-11 20:25:35",admin,"Доступ к модулю ""module"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/module/index.php?hostcms[checked][0][70]=1,127.0.0.1
+"2015-10-11 20:32:04",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php?hostcms[action]=edit&hostcms[checked][0][0]=1&hostcmsMode=blank,127.0.0.1
+"2015-10-11 20:32:07",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php?lib_id=0,127.0.0.1
+"2015-10-11 20:32:13",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php?hostcms[action]=edit&hostcms[checked][0][0]=1&hostcmsMode=blank,127.0.0.1
+"2015-10-11 20:37:17",admin,"Доступ к модулю ""document"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/document/index.php,127.0.0.1
+"2015-10-11 20:37:19",admin,"Доступ к модулю ""document"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/document/index.php?document_dir_id=3,127.0.0.1
+"2015-10-11 20:37:23",admin,"Доступ к модулю ""document"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/document/version/index.php?document_id=14,127.0.0.1
+"2015-10-11 20:37:35",admin,"Доступ к модулю ""document"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/document/version/index.php?document_id=14,127.0.0.1
+"2015-10-11 20:37:37",admin,"Доступ к модулю ""document"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/document/version/,127.0.0.1
+"2015-10-11 20:37:45",admin,"Доступ к модулю ""structure"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/structure/index.php,127.0.0.1
+"2015-10-11 20:38:00",admin,"Доступ к модулю ""multiload"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/multiload/index.php,127.0.0.1
+"2015-10-11 20:38:11",admin,"Доступ к модулю ""informationsystem"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/informationsystem/index.php,127.0.0.1
+"2015-10-11 20:38:12",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/index.php,127.0.0.1
+"2015-10-11 20:38:15",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?shop_id=4&shop_dir_id=0,127.0.0.1
+"2015-10-11 20:38:24",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?shop_id=4&shop_dir_id=0,127.0.0.1
+"2015-10-11 20:38:25",admin,"Доступ к модулю ""document"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/document/version/,127.0.0.1
+"2015-10-11 20:38:37",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?shop_id=4,127.0.0.1
+"2015-10-11 20:43:59",admin,"<strong>Предупреждение:</strong> DOMDocument::loadXML() [&lt;a href='domdocument.loadxml'&gt;domdocument.loadxml&lt;/a&gt;]: Empty string supplied as input в файле Z:\home\shop.albico.by2\www\modules\xsl\processor\xslt.php (строка 36)
+Стек вызовов:
+Файл: modules\xsl\processor\xslt.php, строка 36,
+Файл: modules\core\controller.php, строка 182,
+Файл: modules\shop\controller\show.php, строка 883,
+Файл: templates\template15\template.htm, строка 195,
+Файл: modules\template\model.php, строка 86,
+Файл: modules\core\page.php, строка 138,
+Файл: templates\template14\template.htm, строка 247,
+Файл: modules\template\model.php, строка 86,
+Файл: modules\core\page.php, строка 138,
+Файл: modules\core\command\controller\default.php, строка 453,
+Файл: modules\core\router\route.php, строка 190,
+Файл: index.php, строка 245",3,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/shop/614/,127.0.0.1
+"2015-10-11 20:55:07",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?shop_id=4&shop_group_id=614,127.0.0.1
+"2015-10-11 20:55:22",admin,"Доступ к модулю ""shop"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/shop/item/index.php?shop_id=4&shop_group_id=614,127.0.0.1
+"2015-10-11 20:55:33",admin,"Доступ к модулю ""seo"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/seo/index.php,127.0.0.1
+"2015-10-11 20:55:44",admin,"Доступ к модулю ""seo"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/seo/query/index.php,127.0.0.1
+"2015-10-11 20:55:45",admin,"Выполнено действие ""Определить позиции"", формы ""Поисковые запросы, SEO""",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/seo/query/index.php,127.0.0.1
+"2015-10-11 20:55:50",admin,"Доступ к модулю ""market"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/market/index.php,127.0.0.1
+"2015-10-11 21:00:53",admin,"Доступ к модулю ""market"" разрешен",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/market/index.php,127.0.0.1
+"2015-10-11 21:01:06",admin,"Выход из системы управления",1,"Демонстрационый сайт HostCMS 6 19.08.2015 15:05:13",http://shop.albico.by2/admin/logout.php,127.0.0.1

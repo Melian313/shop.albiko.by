@@ -11,7 +11,7 @@
 	<xsl:template match="/">
 		<xsl:apply-templates select="shop"/>
 	</xsl:template>
-	
+
 	<xsl:template match="shop">
 		<div class="block block-side-nav first">
 			<div class="block-title">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 	</xsl:template>
-	
+
 	<xsl:template match="shop_producer">
 		<li class="level0 level-top">
 			<a href="{/shop/url}producer-{@id}/" hostcms:id="{@id}" hostcms:field="name" hostcms:entity="shop_producer"><xsl:value-of disable-output-escaping="no" select="name"/></a>

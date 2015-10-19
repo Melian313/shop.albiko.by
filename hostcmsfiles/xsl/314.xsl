@@ -33,7 +33,7 @@
 					
 					<div class="caption">
 						<p class="title">
-							<a href="{url}" hostcms:id="{@id}" hostcms:field="name" hostcms:entity="informationsystem_item"><xsl:value-of disable-output-escaping="yes" select="name"/></a>
+							<xsl:value-of disable-output-escaping="yes" select="name"/>
 						</p>
 						<div hostcms:id="{@id}" hostcms:field="description" hostcms:entity="informationsystem_item"><xsl:value-of disable-output-escaping="yes" select="description"/></div>
 					</div>
