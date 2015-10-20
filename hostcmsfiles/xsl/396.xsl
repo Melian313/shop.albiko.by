@@ -5,9 +5,9 @@
 	xmlns:hostcms="http://www.hostcms.ru/"
 	exclude-result-prefixes="hostcms">
 	<xsl:output xmlns="http://www.w3.org/TR/xhtml1/strict" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" encoding="utf-8" indent="yes" method="html" omit-xml-declaration="no" version="1.0" media-type="text/xml"/>
-	
+
 	<!-- СписокУслугНаГлавной -->
-	
+
 	<xsl:template match="/">
 		<div class="info-block">
 			<div class="row">
@@ -15,7 +15,7 @@
 			</div>
 		</div>
 	</xsl:template>
-	
+
 	<xsl:template match="informationsystem_item">
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<div class="pad">
@@ -30,7 +30,7 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</div>
-					
+
 					<div class="caption">
 						<p class="title">
 							<xsl:value-of disable-output-escaping="yes" select="name"/>
