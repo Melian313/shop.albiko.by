@@ -504,6 +504,20 @@ strong {
     margin: 0 auto;
 }
 
+.action-block{
+    position: absolute;
+    margin-top: 10px;
+    height: 20px;
+    width: auto;
+    right: 0;
+    background-color: #f1393c;
+}
+
+.action-block span{
+    margin: 10px;
+    color: #fff;
+}
+
 .grid_wrap-r:hover {
     border-bottom: 3px solid #fb6e52;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.11);
