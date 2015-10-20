@@ -2819,11 +2819,17 @@ body:after {
     transform: rotate(180deg);
     background-position: 0px 50%;
 }
-.razd-container{
-    max-width: 250px;
-    width: 250px;
+.razd-container {
+    max-width: 205px!important;
+    width: 205px!important;
     margin: 0 auto;
 }
+.razd-container img{
+    max-width: 205px!important;
+    width: 205px!important;
+    margin: 0 auto;
+}
+
 .homer img{
     max-width: 320px;
 }
