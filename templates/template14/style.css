@@ -2819,3 +2819,25 @@ body:after {
     transform: rotate(180deg);
     background-position: 0px 50%;
 }
+.razd-container{
+    max-width: 250px;
+    width: 250px;
+    margin: 0 auto;
+}
+.homer img{
+    max-width: 320px;
+}
+.razor{
+    padding: 5px 0px 20px 0px;
+}
+.home-img-container{
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media (min-width: 975px) and (max-width: 1400px) {
+    .homer img {
+        max-width: 210px;
+    }
+}
