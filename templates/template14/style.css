@@ -2802,7 +2802,7 @@ body:after {
     background-repeat: no-repeat;
     max-width: 50px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-    background-position-y: 65px;
+    background-position: 0px 50%;
 }
 
 .carousel-control.right {
@@ -2812,10 +2812,10 @@ body:after {
     background-repeat: no-repeat;
     max-width: 50px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-    background-position-y: 65px;
     -moz-transform: rotate(180deg); /* Для Firefox */
     -ms-transform: rotate(180deg); /* Для IE */
     -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
     -o-transform: rotate(180deg); /* Для Opera */
     transform: rotate(180deg);
+    background-position: 0px 50%;
 }
