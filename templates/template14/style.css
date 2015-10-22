@@ -1502,7 +1502,7 @@ h1.item_title {
 
 #gallery img {
 	border:2px solid white;
-	width: 100px;
+	/*width: 100%;*/
 }
 .active img {
 	border:2px solid #f1393c ;
@@ -1510,6 +1510,11 @@ h1.item_title {
 
 #gallery > a {
 	text-decoration: none !important;
+}
+
+#gallery {
+    max-width: 100px;
+    overflow: hidden;
 }
 
 .zoomWindow { border: 1px solid rgb(136, 136, 136) !important; }
