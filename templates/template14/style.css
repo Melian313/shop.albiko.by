@@ -2833,6 +2833,10 @@ body:after {
 .homer img{
     max-width: 320px;
 }
+div.home-img-container span img {
+    max-width: 320px;
+}
+
 .razor{
     padding: 5px 0px 20px 0px;
 }
@@ -2844,6 +2848,9 @@ body:after {
 }
 @media (min-width: 975px) and (max-width: 1400px) {
     .homer img {
+        max-width: 210px;
+    }
+    div.home-img-container span img {
         max-width: 210px;
     }
 }
