@@ -33,6 +33,48 @@ header .links {
 		text-align: right;
 		margin-bottom: 19px;
 	}
+
+}
+@media (max-width: 768px) {
+    #block_contact_infos {
+        padding-left: 50px!important;
+        padding-right: 0px!important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        text-align: center!important;
+    }
+    #block_contact_infoss {
+        padding-left: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        text-align: center!important;
+    }
+    .fot-content-container{
+        margin-left: 0px;
+        text-align: center;
+    }
+}
+
+.fot-content-container{
+margin-left: 50px;
+}
+
+#block_contact_infos {
+     padding-right: 50px;
+     padding-top: 50px;
+     padding-bottom: 50px;
+     margin: 0 auto;
+     text-align: right;
+ }
+
+#block_contact_infoss {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 header .links li {
@@ -90,7 +132,7 @@ a:hover {
 }
 
 .little-cart {
-    color: #FFF;
+    color: #000;
     cursor: pointer;
     font-size: 13px;
     font-weight: 300;
@@ -926,12 +968,7 @@ button.button span span {
 	color: #f1393c;
 }
 
-#block_contact_infos {
-	float: right;
-	padding-right: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
 
 .toggle-footer {
 	padding-left: 10px;
