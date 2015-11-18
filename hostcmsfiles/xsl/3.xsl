@@ -163,9 +163,9 @@
 		<div style="clear: both"></div>
 
 		<!-- Rss -->
-		<div class="rss">
-		<img src="/images/rss.png"/><xsl:text> </xsl:text><a href="{url}rss/">RSS</a>
-		</div>
+		<!--<div class="rss">-->
+		<!--<img src="/images/rss.png"/><xsl:text> </xsl:text><a href="{url}rss/">RSS</a>-->
+		<!--</div>-->
 	</xsl:template>
 
 	<!-- Вывод строки со значением свойства -->

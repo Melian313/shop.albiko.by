@@ -1,0 +1,15 @@
+"2015-11-18 01:02:09",admin,Logout,1,"Демонстрационный сайт",http://albico.by2/admin/logout.php,127.0.0.1
+"2015-11-18 02:57:41",undefined,"<strong>Warning:</strong> DOMDocument::loadXML() [&lt;a href='domdocument.loadxml'&gt;domdocument.loadxml&lt;/a&gt;]: Empty string supplied as input in file D:\WebServers\home\shop.albico.by2\www\modules\xsl\processor\xslt.php (line 36)
+Requests stack:
+File: modules\xsl\processor\xslt.php, line 36,
+File: modules\core\controller.php, line 182,
+File: modules\informationsystem\controller\show.php, line 646,
+File: templates\template7\template.htm, line 21,
+File: modules\template\model.php, line 86,
+File: modules\core\page.php, line 138,
+File: templates\template1\template.htm, line 201,
+File: modules\template\model.php, line 86,
+File: modules\core\page.php, line 138,
+File: modules\core\command\controller\default.php, line 453,
+File: modules\core\router\route.php, line 190,
+File: d:\WebServers\home\shop.albico.by2\www\index.php, line 245",3,"Демонстрационный сайт",http://albico.by2/,127.0.0.1

@@ -15,9 +15,12 @@
 
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/news/rss/" />
-
-	<!-- jQuery -->
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css?1439982316" />
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/font-awesome.min.css?1439982316" />
 	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<!-- jQuery -->
+
 	<!-- validate -->
 	<script type="text/javascript" src="/hostcmsfiles/jquery/jquery.validate.js"></script>
 	<!-- LightBox -->
@@ -107,7 +110,7 @@
 <script type='text/javascript' src="/images/js/nivo.slider.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-          $('#barousel_prevnextnav').barousel({                
+          $('#barousel_prevnextnav').barousel({
                 navType: 2
             });
     $(".barousel_image div:first").addClass("default");
@@ -121,7 +124,7 @@
         $(document).ready(function () {
         var height = $(".left_content").height();
         $(".right_content").css("height",height+"px");
-        var width = $(document).width()/2; 
+        var width = $(document).width()/2;
         $(".adres").css("left", width+"px");
         $(".adres").css("display","block");
          $('.logo_by-info').hover(function(event){
@@ -130,7 +133,7 @@
     $(this)
       .data('tipText', titleText)
       .removeAttr('title');
-      
+
     $('<p class="tooltip"></p>')
       .text(titleText)
       .appendTo('body')
@@ -192,26 +195,7 @@ Core_Entity::factory('Document', 7)->Document_Versions->getCurrent()->execute();
 ?>
 </div>
 -->
-<div class="slide">
-<?php
-// Новости
-if (Core::moduleIsActive('informationsystem'))
-{
-	$Informationsystem_Controller_Show = new Informationsystem_Controller_Show(
-		Core_Entity::factory('Informationsystem', 15)
-	);
-	$Informationsystem_Controller_Show
-		->xsl(
-			Core_Entity::factory('Xsl')->getByName('СлайдНаГлавной')
-		)
-		->groupsMode('none')
-		->itemsForbiddenTags(array('text'))
-		->group(FALSE)
-		->limit(99)
-		->show();
-}
-?>			
-</div>
+<!---->
 <section>
 
 <?php
@@ -226,13 +210,24 @@ if (Core::moduleIsActive('informationsystem'))
 <a href="/" class="logo_footer"><img src="/images/site/logo_footer.png" /></a>
 </div><!-- end footer-->
 <div class="footer_bottom">
-<a href="http://www.by-info.by/" class="logo_by-info" title="Разработка сайтов в гродно">
-<img src="/images/site/logo_by-info.png" />
-</a>
+	<table border="0" style="width: 100%;">
+		<tbody>
+		<tr>
+			<td align="center" valign="middle"><a href="http://www.airon16.ru" target="_blank"><img
+					src="/images/logo/airon.png" width="106" height="30"/></a></td>
+			<td align="center" valign="middle"><a href="http://www.astrial.ru" target="_blank"><img
+					src="/images/logo/astrial.png" width="128" height="21"/></a></td>
+			<td align="center" valign="middle"><a href="http://eleros.ru" target="_blank"><img
+					src="/images/logo/eleros.png" width="105" height="45"/></a></td>
+			<td align="center" valign="middle"><a href="http://www.asstudio.by/" target="_blank"><img
+					src="http://www.asstudio.by/images/site/logo.jpg" height="40"/></a></td>
+		</tr>
+		</tbody>
+	</table>
 </div>
 <div style="display:none;">
 			Copyright &copy; Корпорация. Работает на <a href="http://www.hostcms.ru" title="Система управления сайтом HostCMS">HostCMS</a>
-		</div>	
+		</div>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function (d, w, c) {

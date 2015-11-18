@@ -168,7 +168,7 @@
 	
 	<!-- Шаблон выводит ссылки подгруппы информационного элемента -->
 	<xsl:template match="informationsystem_group" mode="groups">
-		<li>
+		<li class="col-md-4">
 			<xsl:choose>
 				<xsl:when test="image_small != ''">
 					<a href="{url}" title="{name}"><img src="{dir}{image_small}" alt="{name}" /></a>
@@ -181,7 +181,7 @@
 	</xsl:template>
 	
 	<xsl:template match="informationsystem_item">
-		
+
 		<li>
 			<xsl:choose>
 				<xsl:when test="image_large != ''">
